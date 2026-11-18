@@ -1,6 +1,8 @@
 class Solution:
-    def runningSum(self, nums: List[int]) -> List[int]:
+    def runningSum(self, nums: list[int]) -> list[int]:
         l=[]
-        for i in range(0,len(nums)):
-            l.append(sum(nums[0:i+1]))
+        sum=0
+        for i in range(len(nums)):
+            sum+=nums[i]
+            l.append(sum)
         return(l)
